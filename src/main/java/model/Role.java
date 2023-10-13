@@ -66,6 +66,34 @@ public class Role {
 	public void setMovieName(String movieName) {
 		this.movieName = movieName;
 	}
+
+	/**
+	 * @return the actor
+	 */
+	public Actor getActor() {
+		return actor;
+	}
+
+	/**
+	 * @param actor the actor to set
+	 */
+	public void setActor(Actor actor) {
+		this.actor = actor;
+	}
+
+	/**
+	 * @return the roleId
+	 */
+	public int getRoleId() {
+		return roleId;
+	}
+
+	/**
+	 * @param roleId the roleId to set
+	 */
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
 	
 	
 	
