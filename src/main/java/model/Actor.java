@@ -23,7 +23,7 @@ public class Actor {
 	
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private String actorId;
+		private int actorId;
 		private String name;
 		private String birthday;
 		private String academyAwards;
@@ -60,14 +60,14 @@ public class Actor {
 		/**
 		 * @return the actorId
 		 */
-		public String getActorId() {
+		public int getActorId() {
 			return actorId;
 		}
 
 		/**
 		 * @param actorId the actorId to set
 		 */
-		public void setActorId(String actorId) {
+		public void setActorId(int actorId) {
 			this.actorId = actorId;
 		}
 

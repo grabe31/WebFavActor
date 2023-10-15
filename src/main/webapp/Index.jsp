@@ -10,11 +10,19 @@
 	<h1>Here is the actor information!</h1>
 	<form action="showRoles" method="get">
 		<input type="submit" value="Show Roles" />
+		</form>
+	<a href= "AddRole.jsp">Add Role</a>
+	<a href= "updateRole.jsp">Update Role</a>
+	<a href = "RemoveRole.jsp">Remove Role</a>
+	
+	<br>
+	<br>
+	<form action="showActors" method="get">
+		<input type="submit" value="Show Actors" />
 	</form>
 	<a href= "Add.jsp">Add Actor</a>
-	<a href= "AddRole.jsp">Add Role</a>
+	<a href = "UpdateActor.jsp">Update Actor</a>
 	<a href = "RemoveActor.jsp">Remove Actor</a>
-	<a href = "RemoveMovie.jsp">Remove Movie</a>
-
+	
 </body>
 </html>

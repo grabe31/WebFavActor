@@ -8,6 +8,7 @@
 </head>
 <body>
 		<form action = "addRole" method = "post">
+		Actor Name: <input type = "text" name = "actor" size = "25"/>
 		Character Name:<input type = "text" name = "charName" size = "25"/>
 			Movie Name<input type = "text" name = "movieName" size = "25"/>
 			<input type="submit" value="Add Role!" />

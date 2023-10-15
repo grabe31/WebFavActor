@@ -14,7 +14,7 @@ import model.Actor;
 /**
  * Servlet implementation class DeleteActor
  */
-@WebServlet("/DeleteActor")
+@WebServlet("/deleteActor")
 public class DeleteActor extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
