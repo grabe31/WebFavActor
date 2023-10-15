@@ -7,20 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import controller.Helpers.RoleHelper;
-import model.Role;
+import controller.Helpers.ActorHelper;
+import model.Actor;
+
 
 /**
- * Servlet implementation class AddRole
+ * Servlet implementation class DeleteActor
  */
-@WebServlet("/addRole")
-public class AddRole extends HttpServlet {
+@WebServlet("/DeleteActor")
+public class DeleteActor extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddRole() {
+    public DeleteActor() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,12 +32,12 @@ public class AddRole extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		Role h = new Role();
-		RoleHelper helper = new RoleHelper();
-		h.setCharName(request.getParameter("charName"));
-		h.setMovieName(request.getParameter("movieName"));
-		helper.persist(h);
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-	}
+		ActorHelper helper = new ActorHelper();
+		String name = request.getParameter("name");
+		Actor deleteable = helper.searchActorByName(name);
+		helper.delete(deleteable);
+		getServletContext().getRequestDispatcher("/Index.jsp").forward(request, response);	
+
+}
 
 }

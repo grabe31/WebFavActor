@@ -7,23 +7,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import controller.Helpers.RoleHelper;
-import model.Role;
+import controller.Helpers.ActorHelper;
+import model.Actor;
+
+
 
 /**
- * Servlet implementation class AddRole
+ * Servlet implementation class AddActor
  */
-@WebServlet("/addRole")
-public class AddRole extends HttpServlet {
+@WebServlet("/addActor")
+public class AddActor extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddRole() {
+    public AddActor() {
         super();
         // TODO Auto-generated constructor stub
     }
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -31,12 +34,14 @@ public class AddRole extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		Role h = new Role();
-		RoleHelper helper = new RoleHelper();
-		h.setCharName(request.getParameter("charName"));
-		h.setMovieName(request.getParameter("movieName"));
-		helper.persist(h);
-		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		
+		Actor t = new Actor();
+		ActorHelper helper = new ActorHelper();
+		t.setName(request.getParameter("name"));
+		t.setBirthday(request.getParameter("birthday"));
+		t.setAcademyAwards(request.getParameter("academyAwards"));
+		helper.persist(t);
+		getServletContext().getRequestDispatcher("/Index.jsp").forward(request, response);
 	}
 
 }

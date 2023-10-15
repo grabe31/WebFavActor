@@ -10,20 +10,24 @@ import javax.servlet.http.HttpServletResponse;
 import controller.Helpers.RoleHelper;
 import model.Role;
 
+
+
 /**
- * Servlet implementation class AddRole
+ * Servlet implementation class UpdateRole
  */
-@WebServlet("/addRole")
-public class AddRole extends HttpServlet {
+@WebServlet("/updateRole")
+public class UpdateRole extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddRole() {
+    public UpdateRole() {
         super();
         // TODO Auto-generated constructor stub
     }
+
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -31,11 +35,19 @@ public class AddRole extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		Role h = new Role();
 		RoleHelper helper = new RoleHelper();
-		h.setCharName(request.getParameter("charName"));
-		h.setMovieName(request.getParameter("movieName"));
-		helper.persist(h);
+
+		String oldName = request.getParameter("oldName");
+		String charName = request.getParameter("charName");
+		String movieName = request.getParameter("movieName");
+		String power = request.getParameter("power");
+
+		Role roleToUpdate = helper.searchRoleByName(oldName);
+		roleToUpdate.setCharName(charName);
+		roleToUpdate.setMovieName(movieName);
+		
+		helper.update(roleToUpdate);
+
 		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
