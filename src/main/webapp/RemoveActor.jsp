@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action = "deletePet" method="post">
+	<form action = "deleteActor" method="post">
 	Enter the Actor you want to delete: <input type = "text" name = "name"
 	size = "25"><input type = "submit" value = "Delete"/>
 </form>
