@@ -8,10 +8,10 @@
 </head>
 <body>
 	<h1>Here is the actor information!</h1>
-	<form action="ShowPets" method="get">
-		<input type="submit" value="Show Pets!" />
+	<form action="ShowActors" method="get">
+		<input type="submit" value="Show Actors!" />
 	</form>
-	<a href= "add.jsp">Add Actor</a>
+	<a href= "Add.jsp">Add Actor</a>
 	<a href= "AddRole.jsp">Add Role</a>
 	<a href = "RemoveActor.jsp">Remove Actor</a>
 	<a href = "RemoveMovie.jsp">Remove Movie</a>
