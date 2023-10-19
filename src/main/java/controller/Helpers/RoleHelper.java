@@ -60,7 +60,7 @@ public class RoleHelper {
 	public Role searchRoleByName(String oldName) {
 		EntityManager manager = factory.createEntityManager();
 		TypedQuery<Role> query = manager.createQuery("SELECT i FROM role AS i WHERE i.charName = :charName", Role.class);
-		query.setParameter("heroName", oldName);
+		query.setParameter("charName", oldName);
 		Role dbEntity = query.getSingleResult();
 		manager.close();
 		return dbEntity;

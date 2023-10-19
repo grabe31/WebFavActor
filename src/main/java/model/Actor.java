@@ -23,10 +23,10 @@ public class Actor {
 	
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private String actorId;
+		private int actorId;
 		private String name;
 		private String birthday;
-		private int academyAwards;
+		private String academyAwards;
 		
 		//each actor may have many roles
 		@OneToMany(mappedBy = "actor", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -37,7 +37,7 @@ public class Actor {
 			super();
 		}
 		
-		public Actor(String name, String birthday, int academyAwards) {
+		public Actor(String name, String birthday, String academyAwards) {
 			this.name= name;
 			this.birthday = birthday;
 			this.academyAwards = academyAwards;
@@ -60,14 +60,14 @@ public class Actor {
 		/**
 		 * @return the actorId
 		 */
-		public String getActorId() {
+		public int getActorId() {
 			return actorId;
 		}
 
 		/**
 		 * @param actorId the actorId to set
 		 */
-		public void setActorId(String actorId) {
+		public void setActorId(int actorId) {
 			this.actorId = actorId;
 		}
 
@@ -88,14 +88,14 @@ public class Actor {
 		/**
 		 * @return the academyAwards
 		 */
-		public int getAcademyAwards() {
+		public String getAcademyAwards() {
 			return academyAwards;
 		}
 
 		/**
 		 * @param academyAwards the academyAwards to set
 		 */
-		public void setAcademyAwards(int academyAwards) {
+		public void setAcademyAwards(String academyAwards) {
 			this.academyAwards = academyAwards;
 		}
 
@@ -112,5 +112,6 @@ public class Actor {
 		public void setRoles(List<Role> roles) {
 			this.roles = roles;
 		}
+
 		
 }
