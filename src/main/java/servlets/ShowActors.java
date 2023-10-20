@@ -17,7 +17,7 @@ import model.Actor;
 /**
  * Servlet implementation class ShowActors
  */
-@WebServlet("/showActors")
+@WebServlet("/ShowActors")
 public class ShowActors extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

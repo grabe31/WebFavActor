@@ -13,9 +13,7 @@
 		<input type="submit" value="Show Roles" />
 		</form>
 
-	<form action="ShowActors" method="get">
-		<input type="submit" value="Show Actors!" />
-	</form>
+	
 	<a href= "Add.jsp">Add Actor</a>
 	<a href= "AddRole.jsp">Add Role</a>
 	<a href= "updateRole.jsp">Update Role</a>
@@ -23,7 +21,7 @@
 	
 	<br>
 	<br>
-	<form action="showActors" method="get">
+	<form action="ShowActors" method="get">
 		<input type="submit" value="Show Actors" />
 	</form>
 	<a href= "Add.jsp">Add Actor</a>

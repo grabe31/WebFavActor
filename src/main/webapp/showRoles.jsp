@@ -12,10 +12,9 @@
 	<table>
 		<c:forEach items="${requestScope.allRoles}" var="currentRole">
 			<tr>
-				<td>${currentRole.commonName}|</td>
-				<td>${currentRole.heroName}|</td>
-				<td>${currentRole.power}|</td>
-				<td>${currentRole.team.name}</td>
+				<td>${currentRole.actor}|</td>
+				<td>${currentRole.charName}|</td>
+				<td>${currentRole.movieName}|</td>
 			</tr>
 		</c:forEach>
 	</table>
