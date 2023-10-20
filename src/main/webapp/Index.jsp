@@ -14,7 +14,6 @@
 		</form>
 
 	
-	<a href= "Add.jsp">Add Actor</a>
 	<a href= "AddRole.jsp">Add Role</a>
 	<a href= "updateRole.jsp">Update Role</a>
 	<a href = "RemoveRole.jsp">Remove Role</a>
